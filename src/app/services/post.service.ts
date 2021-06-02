@@ -8,10 +8,10 @@ import {Post} from "../models/Post";
 })
 export class PostService {
   private url = 'https://jsonplaceholder.typicode.com/posts';
-  constructor(private httpClient:HttpClient) {
+  constructor(private httpClient:HttpClient) {             // TODO   Не выдокремив ентером зверху
   }
 
-  getPosts():Observable<Post[]>{
+  getPosts():Observable<Post[]>{                           // TODO   Невикористаний код
     return this.httpClient.get<Post[]>(this.url);
   }
 

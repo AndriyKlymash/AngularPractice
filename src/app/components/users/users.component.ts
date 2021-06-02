@@ -6,7 +6,7 @@ import {PostService} from "../../services/post.service";
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
-  // template:'<UsersComponent [usersProperty]="usersProperty"></UsersComponent>'
+  // template:'<UsersComponent [usersProperty]="usersProperty"></UsersComponent>'        // TODO   зайве
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
@@ -16,7 +16,7 @@ export class UsersComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // let find = this.users.find(value => value.id === id);
+    // let find = this.users.find(value => value.id === id);                             // TODO   зайве
     this.userService.getUsers().subscribe(value => {
       this.users = value;
       for (const user of this.users) {
