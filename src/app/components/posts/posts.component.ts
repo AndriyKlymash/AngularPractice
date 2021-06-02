@@ -9,7 +9,7 @@ import {PostService} from "../../services/post.service";
 })
 export class PostsComponent implements OnInit {
   @Input()
-  userId:number;
+  userId: number;
 
   posts:Post[];
   constructor(private postService:PostService) {                           // TODO   Не выдокремив ентером зверху
@@ -17,7 +17,7 @@ export class PostsComponent implements OnInit {
 
   ngOnInit(): void {
     this.postService.getPostsByUserId(this.userId).subscribe(value => {
-      this.posts=value;
+      this.posts = value;
     })
   }
 }
