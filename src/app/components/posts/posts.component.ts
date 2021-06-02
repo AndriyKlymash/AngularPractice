@@ -11,8 +11,9 @@ export class PostsComponent implements OnInit {
   @Input()
   userId: number;
 
-  posts:Post[];
-  constructor(private postService:PostService) {                           // TODO   Не выдокремив ентером зверху
+  posts: Post[];
+
+  constructor(private postService: PostService) {                           // TODO   Не выдокремив ентером зверху
   }
 
   ngOnInit(): void {
