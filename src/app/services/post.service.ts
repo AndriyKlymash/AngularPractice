@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Post} from "../models/Post";
 
@@ -11,13 +11,11 @@ export class PostService {
   constructor(private httpClient:HttpClient) {
   }
 
-  getPosts():Observable<Post[]>{
-    return this.httpClient.get<Post[]>(this.url);
-  }
+  // getPosts():Observable<Post[]>{
+  //   return this.httpClient.get<Post[]>(this.url);
+  // }
 
   getPostsByUserId(id:number):Observable<Post[]>{
-    const headers = new HttpHeaders()
-    const params = new HttpParams().append('userId', id);
-    return this.httpClient.get<Post[]>(this.url,{headers, params});
+  return this.httpClient.get<Post[]>(`${this.url}?userId=${id}`);
 }
 }
