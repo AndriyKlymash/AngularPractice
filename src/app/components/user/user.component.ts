@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {User} from "../../models/User";
 
 @Component({
@@ -6,13 +6,11 @@ import {User} from "../../models/User";
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
-export class UserComponent implements OnInit {
+
+export class UserComponent {
   @Input()
-  user:User;
+  user: User;
 
-  constructor() { }                            // TODO   Невикористаний код
-
-  ngOnInit(): void {                           // TODO   Невикористаний код
+  constructor() {
   }
-
 }
