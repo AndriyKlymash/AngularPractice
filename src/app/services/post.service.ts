@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Post} from "../models/Post";
 
@@ -8,14 +8,16 @@ import {Post} from "../models/Post";
 })
 export class PostService {
   private url = 'https://jsonplaceholder.typicode.com/posts';
-  constructor(private httpClient:HttpClient) {
+  constructor(private httpClient:HttpClient) {             // TODO   Не выдокремив ентером зверху
   }
 
-  // getPosts():Observable<Post[]>{
-  //   return this.httpClient.get<Post[]>(this.url);
-  // }
+  getPosts():Observable<Post[]>{                           // TODO   Невикористаний код
+    return this.httpClient.get<Post[]>(this.url);
+  }
 
   getPostsByUserId(id:number):Observable<Post[]>{
-  return this.httpClient.get<Post[]>(`${this.url}?userId=${id}`);
+    const headers = new HttpHeaders()
+    const params = new HttpParams().append('userId', id);
+    return this.httpClient.get<Post[]>(this.url,{headers, params});
 }
 }
