@@ -15,5 +15,5 @@ export class UserService {
   getUsers(): Observable<User[]> {
     return this.httpClient.get<User[]>(this.url);
   }
-
+                                       // TODO   зайвий ентер
 }
