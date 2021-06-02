@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 import {Post} from "../../models/Post";
 import {ActivatedRoute, Router} from "@angular/router";
 
@@ -7,7 +7,7 @@ import {ActivatedRoute, Router} from "@angular/router";
   templateUrl: './post-details.component.html',
   styleUrls: ['./post-details.component.css']
 })
-export class PostDetailsComponent implements OnInit {
+export class PostDetailsComponent {
 
   post:Post;
 
@@ -17,9 +17,4 @@ export class PostDetailsComponent implements OnInit {
       this.post=this.router.getCurrentNavigation()?.extras.state as Post;
     })
   }
-
-  ngOnInit(): void {
-
-  }
-
 }

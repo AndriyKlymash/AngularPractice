@@ -8,8 +8,8 @@ import {User} from "../../models/User";
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-
   users:User[];
+
   constructor(private userService:UserService) { }
 
   ngOnInit(): void {
@@ -17,5 +17,4 @@ export class UsersComponent implements OnInit {
       this.users=value;
     })
   }
-
 }
