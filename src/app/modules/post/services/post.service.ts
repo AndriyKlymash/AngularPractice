@@ -14,4 +14,5 @@ export class PostService {
   getPosts():Observable<Post[]>{
     return this.httpClient.get<Post[]>(this.url)
   }
+
 }

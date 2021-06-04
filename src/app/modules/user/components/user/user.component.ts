@@ -11,9 +11,10 @@ export class UserComponent {
   @Input()
   user: User;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+  }
 
-  goToDetails() {
-    this.router.navigate([this.user.id], {relativeTo: this.activatedRoute, state: this.user})
+  showPosts() {
+    this.router.navigate([this.user.id], {relativeTo: this.activatedRoute});
   }
 }

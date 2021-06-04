@@ -11,9 +11,10 @@ export class PostComponent {
   @Input()
   post: Post;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+  }
 
-  goToPostDetail() {
-      this.router.navigate([this.post.id], {relativeTo: this.activatedRoute, state:this.post});
+  openComments() {
+    this.router.navigate([this.post.id], {relativeTo: this.activatedRoute});
   }
 }
