@@ -13,7 +13,7 @@ export class PostsComponent implements OnInit {
 
   posts: Post[];
 
-  constructor(private postService: PostService) {                           // TODO   Не выдокремив ентером зверху
+  constructor(private postService: PostService) {
   }
 
   ngOnInit(): void {
