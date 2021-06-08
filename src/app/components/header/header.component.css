@@ -1,0 +1,11 @@
+.wrap{
+  display: flex;
+  justify-content: flex-end;
+  background:blue;
+  padding-right: 10px;
+  height: 40px;
+  align-items: center;
+}
+
+
+

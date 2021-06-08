@@ -1,0 +1,5 @@
+  <hr>
+  <div *ngIf="user">
+    {{user?.id}} -- {{user?.name}} -- {{user?.email}}
+    <button (click)="login()">login</button>
+  </div>
